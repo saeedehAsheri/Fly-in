@@ -28,10 +28,10 @@ This creates `venv/` and installs `flake8`, `mypy`, and `matplotlib` inside it.
 
 ```bash
 # Plain output (required subject format)
-make run MAP=map/01_linear_path.txt
+make run MAP=maps/01_linear_path.txt
 
 # Or directly:
-venv/bin/python main.py map/01_linear_path.txt
+venv/bin/python main.py maps/01_linear_path.txt
 ```
 
 ### All command-line options
@@ -51,15 +51,15 @@ python3 main.py [options] <map_file> [max_turns]
 
 ```bash
 # Colored terminal with capacity diagnostics
-venv/bin/python main.py --visual --capacity-info --verbose map/.../02_simple_fork.txt
+venv/bin/python main.py --visual --capacity-info --verbose maps/.../02_simple_fork.txt
 
 # Full debug info
-venv/bin/python main.py --visual --capacity-info --verbose map/.../03_priority_puzzle.txt
+venv/bin/python main.py --visual --capacity-info --verbose maps/.../03_priority_puzzle.txt
 
 # Graphical animated display (Mac or Linux desktop)
 make gui MAP=map/02_simple_fork.txt
 # or slower animation:
-venv/bin/python main.py --gui --gui-speed 1.5 map/.../01_maze_nightmare.txt
+venv/bin/python main.py --gui --gui-speed 1.5 maps/.../01_maze_nightmare.txt
 ```
 
 ### Lint
@@ -143,7 +143,7 @@ flyin/
 ├── simulation/
 └── visualization/
 main.py
-map/
+maps/
 README.md
 Makefile
 ```
@@ -157,4 +157,3 @@ Resources used:
 - General algorithm knowledge about Dijkstra, DFS, and turn-based scheduling.
 - https://en.wikipedia.org/wiki/Multi-agent_pathfinding
 
-AI was used as a support tool to review structure, suggest test cases, improve explanations. The implementation decisions, project understanding, and final validation remain the responsibility of the learner.
